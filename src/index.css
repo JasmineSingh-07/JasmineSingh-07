@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base { body { @apply bg-plum text-peach font-sans h-screen overflow-hidden; } }
+@layer components {
+  .btn { @apply flex-1 rounded-2xl bg-tan px-4 py-3 font-semibold text-plum hover:brightness-110 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-mint; }
+  .btn-alt { @apply bg-transparent text-peach border-2 border-line; }
+  .btn-on { @apply bg-mint text-plum border-mint; }
+  .field { @apply w-full rounded-2xl border-2 border-line bg-plum2 px-4 py-3 font-semibold text-peach placeholder:text-dim focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-mint; }
+  .ring-i { @apply absolute h-[120px] w-[120px] rounded-full border-2 border-tan opacity-0; animation: rip 6s infinite; }
+}
+@keyframes rip { 0% { transform: scale(1); opacity: .9 } 100% { transform: scale(14); opacity: 0 } }
+@media (prefers-reduced-motion: reduce) { .ring-i { animation: none } }
