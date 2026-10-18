@@ -48,21 +48,38 @@ ProxiSpeak is a **geospatial proximity audio ecosystem** — a browser-based vir
 
 1. **Prerequisites:** Node.js 18+ and MongoDB (or a free [MongoDB Atlas](https://mongodb.com/atlas) URI).
 
-2. **Clone & configure:**
+2. **Clone the repo:**
    ```bash
    git clone https://github.com/JasmineSingh-07/proxispeak.git
    cd proxispeak
-   cp .env.example .env
-   # Edit .env — set MONGO_URI and a long random JWT_SECRET
    ```
 
-3. **Install & run:**
+3. **Create your `.env` file:**
+
+   **Mac / Linux:**
+   ```bash
+   cp .env.example .env
+   ```
+
+   **Windows (Command Prompt):**
+   ```cmd
+   copy .env.example .env
+   ```
+
+   **Windows (PowerShell):**
+   ```powershell
+   Copy-Item .env.example .env
+   ```
+
+   Then open `.env` and set your `MONGO_URI` and a long random `JWT_SECRET`.
+
+4. **Install & run:**
    ```bash
    npm install
    npm run dev
    ```
 
-4. Open **http://localhost:5173** in two different browsers (with different accounts), join the same room and walk toward each other!
+5. Open **http://localhost:5173** in two different browsers (with different accounts), join the same room and walk toward each other!
 
 ---
 
